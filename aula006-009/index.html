@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      font: normal 14pt arial;
+    }
+  </style>
+</head>
+<body>
+  Olah
+
+  <h1>Ordem de precedência</h1>
+  <h2>Operadores aritméticos</h2>
+  <ul>
+    <li>(), **</li>
+    <li>/ e *</li>
+    <li>+ e -</li>
+  </ul>
+  <h2>Operadores relacionais</h2>
+  <p>Não têm ordem de precedência (quem aparecer primeiro, será resolvido primeiro)</p>
+  <p>>, <, >=, <=, ==, ===, !=</p>
+
+  <h2>Operadores lógicos</h2>
+  <p>Têm ordem de precedência</p>
+  <ul>
+    <li>!</li>
+    <li>&&</li>
+    <li>||</li>
+  </ul>
+  <h2>Operador ternário</h2>
+  <p>É sempre o último a ser feito</p>
+  <script>
+    alert('Bem vindo')
+    var personagem = prompt('Digite o nome do seu personagem:')
+    document.write('Olah ' + personagem.toUpperCase() + ', seu nome tem ' + personagem.length + ' letras.<br/>')
+
+    var idade = parseInt(prompt('Informe a sua idade:'))
+    var experiencia = parseInt(prompt('Informe a quantidade de XP:'))
+    experiencia = experiencia + idade
+    document.write('Parabéns, você ganhou um bonus de XP igual a sua idade! Você tem um total de ' + experiencia + ' de XP.<br/>')
+    
+    var ouro = Number(prompt('Informe quantos monstros você matou na última dungeon:') * 3.7)
+    document.write(`Você ganhou ${ouro.toFixed(2).replace('.', ',')} de ouro.<br/>`)
+    document.write(`A quantidade de ouro que você tem equivale a  ${(ouro * 44.1)
+    .toLocaleString('pt-BR', {style: "currency", currency: 'BRL'})}.`)
+
+</script>
+</body>
+</html>
