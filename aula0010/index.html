@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      #area {
+        font: normal 20pt Arial;
+        background-color: rgb(97, 212, 97);
+        color: white;
+        width: 200px;
+        height: 200px;
+        text-align: center;
+        line-height: 200px;
+      }
+    </style>
+    <title>Eventos DOM</title>
+  </head>
+  <body>
+    <div id="area" onmouseout="sair()">Interaja...</div>
+    <script>
+      var area = document.getElementById('area'); // não é uma boa prática, mas por ora vai ser assim
+      area.addEventListener('click', clicar);
+      area.addEventListener('mouseenter', entrar);
+
+      function clicar() {
+        area.innerText = 'Clicou!!';
+        area.style.background = 'red';
+      }
+      function entrar() {
+        area.innerText = 'Entrou!';
+      }
+      function sair() {
+        area.innerText = 'Saiu!';
+        area.style.background = 'rgb(97, 212, 97)';
+      }
+    </script>
+  </body>
+</html>
