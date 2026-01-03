@@ -3,6 +3,7 @@ body {
   font: normal 14px Arial;
 }
 header {
+  text-align: center;
 }
 section {
   background-color: whitesmoke;
@@ -16,4 +17,13 @@ footer {
   color: white;
   text-align: center;
   font-style: italic;
+}
+#res {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#foto {
+  width: 200px;
+  margin-top: 20px;
 }
